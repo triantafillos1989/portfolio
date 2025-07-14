@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta charset="UTF-8" />
+		<title>My Daily Bites</title>
+		<meta name="viewport"	content="width=device-width, initial-scale=1.0 " />
+		<link rel="stylesheet" href="css/myStyle.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	</head>
+	<body>
+		<header>
+			<h1>My Daily Bites</h1>
+			<button class="burger visible-xs glyphicon glyphicon-menu-hamburger"	id="burger"></button>
+			<nav id="nav-menu">
+				<ul>
+					<li><a href="#about">about</a></li>
+					<li><a href="#menu">our menu</a></li>
+					<li><a href="#contact">contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="hero">
+			<h2>Ανακαλύψτε καθημερινά νέες γευσεις.</h2>
+			<p>Δημιουργούμε για εσάς, αυθεντικές συνταγές, με μοντέρνα ματιά</p>
+			<a href="#menu" class="contactBtn">To menu μας</a>
+		</section>
+		<section id="about">
+			<h2>Λίγα λόγια για εμάς..</h2>
+			<p>Η λειτουργεία μας ξεκινάεις πίσω στο 1968 από το πρώτο μας κατάστημα στο κέντρο της Θεσσαλονίκης
+			επί της οδού Τσιμισκή.</p>
+			<p>Είμαστε ένα μικρό οικογενειακό bistro με πάθος για την μεσογειακή κουζίνα.</p>
+		</section>
+		<section id="menu">
+			<h2>Το μενού μας</h2>
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="images/international-food-4584893_640.jpg"	alt="Mousakas" />
+					<h3>Μουσακάς</h3>
+					<p>Ένα παραδοσιακό πιάτο, συνταγή της μαμάς, με στρώσεις μελιτζάνας, κιμά και κρέμα μπεσαμέλ.</p>
+					<p class="price">Τιμή: 6,50€ /μερίδα</p>
+					<div class="rating">⭐⭐⭐⭐☆</div>
+				</div>
+				<div class="menu-item">
+					<img src="images/joshua-kettle-OyZJU94P4WM-unsplash.jpg"	alt="Souvlaki" />
+					<h3>Σουβλάκι</h3>
+					<p>Χοιρινό ή Κοτόπουλο, μαριναρισμένο και ψημένο στα κάρβουνα, σε χειροποίητη πίτα που συνοδεύεται με τραγανές πατάτες.</p>
+					<p class="price">Τιμή: 7,00€ /μερίδα</p>
+					<div class="rating">⭐⭐⭐⭐⭐</div>
+				</div>
+				<div class="menu-item">
+					<img src="images/pexels-tr-ng-nguy-n-thanh-2150411289-32973137.jpg"	alt="espersso cup" />
+					<h3>Espresso</h3>
+					<p>Καθημερινά φρεσκοκομένος καφές espresso σε μονή, διπλή ή τετραπλή δόση.</p>
+					<p class="price">Τιμή: 3,00€</p>
+					<div class="rating">⭐⭐⭐⭐⭐</div>
+				</div>
+				<div class="menu-item">
+					<img src="images/pexels-juanpphotoandvideo-894696.jpg"	alt="espresso capucino" />
+					<h3>Capucino</h3>
+					<p>Απολαυσε καθημερινά ένα καφέ Capucino στο κατάστημα μας ή On the Go!</p>
+					<p class="price">Τιμή: 4,00€</p>
+					<div class="rating">⭐⭐⭐⭐⭐</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Επικοινωνία</h2>
+			<form>
+				<input type="text" placeholder="Όνομα/ Επώνυμο" required />
+				<input type="email" placeholder="example@gmail.com" required />
+				<textarea placeholder="γραψε κατι .."></textarea>
+				<button type="submit" class="contactBtn">Αποστολή</button>
+			</form>
+		</section>
+		<footer class="siteFooter">
+			<div class="footerContent">
+				<p>&copy; 2025 My Daily Bites</p>
+				<address>
+					<strong>My Daily Bites</strong> Οδός: Τσιμισκή 42, ΤΚ 54625<br>
+					Τηλέφωνο: <a href="tel:+302310123456">2310 123 456</a><br>
+					Email: <a href="mailto:info@mydailybites.gr">info@mydailybites.gr</a>
+				</address>
+				<div class="social-links">
+					<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+				</div>
+			</div>
+		</footer>
+		
+		<script>
+			const burger = document.getElementById('burger');
+			const navMenu = document.getElementById('nav-menu').querySelector('ul');
+			
+			burger.addEventListener('click' , () => {
+				navMenu.classList.toggle('active');
+			});
+		</script>
+	</body>
+</html>
