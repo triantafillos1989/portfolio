@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Horus Timer Shop | HTS</title>
+		<link rel="stylesheet"	href="css/mainStyle.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<button class="burger" onclick="toggleMenu()">☰</button>
+				<div class="logo">Horus Timer Shop |HTS|</div>
+				<ul class="nav-links" id="navMenu">
+					<li class="has-submenu">
+						<a href="#">products</a>
+						<ul class="submenu">
+							<li><a href="#">men</a></li>
+							<li><a href="#">wommen</a></li>
+						</ul>
+					</li>
+					<li><a href="#about">about</a></li>
+					<li><a href="#contact">contact</a></li>
+					<li id="cart">
+						καλάθι: <span id="cart-count">0</span>
+					</li>
+				</ul>
+				<div class="social-icons">
+					<a href="https://facebook.com" target="_blank"	aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://instagram.com" target="_blank"	aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+					<a href="https://tiktok.com" target="_blank"	aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+					<a href="https://facebook.com" target="_blank"	aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+				</div>
+			</nav>
+		</header>
+		
+		<main>
+			<section id="slideshow" class="carousel-section">
+				<div class="carousel">
+					<div class="slide active">
+						<img src="images/newItems/pexels-alexandr-borecky-128389-393047.jpg" alt="slide_1" />
+						<div class="caption">
+							<h2>Ανακάλυψε κι εσύ την νέα μας συλλογή</h2>
+							<a href="#products" class="cta-btn">Δες εδώ</a>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="images/newItems/pexels-pixabay-267394.jpg" alt="slide_2" />
+						<div class="caption">
+							<h2>Πρόσφερε στους αγαπημένους σου ένα δώρο</h2>
+							<a href="#products" class="cta-btn">Δες εδώ</a>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="images/newItems/pexels-tdcat-437037.jpg" alt="slide_3" />
+						<div class="caption">
+							<h2>Κομψά ρολόγια για κάθε στυλ</h2>
+							<a href="#products" class="cta-btn">Δες εδώ</a>
+						</div>
+					</div>
+					<button class="prev" onclick="prevSlide()">&#10094;</button>
+					<button class="next" onclick="nextSlide()">&#10095;</button>
+				</div>
+			</section>
+			<section class="product-list">
+				<div class="product">
+					<img src="images/menWatches/pexels-jatin-anand-33853-128206.jpg" alt="watch_1" />	
+					<h3>Sport Ρολόι</h3>
+					<p class="price">Τιμή: €120</p>
+					<p class="description">Ανθεκτικό σπορ ρολόι με λουράκι σιλικόνης και μηχανισμό quartz.</p>
+					<button onclick="addToCart('Sport Ρολόι', 120)">Add to Cart</button>
+				</div>
+				<div class="product">
+					<img src="images/menWatches/pexels-joey-nguy-n-1056657-2113994.jpg" alt="watch_2" />	
+					<h3>Κλασικό Ρολόι</h3>
+					<p>Τιμή: €95</p>
+					<p class="description">Κλασικό ρολόι με δερμάτινο λουράκι και αδιάβροχη κάσα.</p>
+					<button onclick="addToCart('κλασικό Ρολόι', 95)">Add to Cart</button>
+				</div>
+				<div class="product">
+					<img src="images/menWatches/pexels-pixabay-47856.jpg" alt="watch_3" />	
+					<h3>Κλασικό Ρολόι</h3>
+					<p>Τιμή: €76</p>
+					<p class="description">Κλασικό ρολόι με μεταλικό σκελετό και αδιάβροχη κάσα.</p>
+					<button onclick="addToCart('μεταλικό Ρολόι', 76)">Add to Cart</button>
+				</div>
+				<div class="product">
+					<img src="images/menWatches/pexels-pixabay-277390.jpg" alt="watch_4" />	
+					<h3>Κλασικό Ρολόι</h3>
+					<p>Τιμή: €100</p>
+					<p class="description">Κλασικό ρολόι με δερμάτινο λουράκι, ασημί λεπτομέριες και αδιάβροχη μαύρη κάσα.</p>
+					<button onclick="addToCart('κλασικό Ρολόι', 100)">Add to Cart</button>
+				</div>
+			</section>
+			<section id="about"	class="info-section">
+				<h2>Είμαστε οι Horus Timer Section..</h2>
+					<p>Το Horus Timer Shop είναι ένα ελληνικό e-shop με εξειδίκευση σε ρολόγια υψηλής ποιότητας.
+					Προσφέρουμε σπορ, κλασικά και πολυτελή ρολόγια για άνδρες και γυναίκες.
+					Η αποστολή μας είναι να προσφέρουμε στιλ, ακρίβεια και αξιοπιστία.
+					</p>
+			</section>
+			<section id="contact" class="info-section contact">
+				<h2>Contact us..</h2>
+					<p>Είμαστε εδώ για κάθε αποροία σας! Μπορείτε να επικοινωνήσετε μαζί μας: </p>
+					<ul>
+						<li>Διεύθυνση: Λεωφόρος Κών. Καραμανλή 123, Θεσσαλονίκη</li>
+						<li>Τηλέφωνο: <a href="tel:+23101234567">2310 123 4567</a></li>
+						<li>Email: <a href="mailto:info@horustimershop.gr">info@horustimershop</a></li>
+					</ul>
+					<form action="contact.php" method="POST" class="contact-form">
+						<div class="form-group">
+							<label for="fname">Name</label>
+							<input type="text" id="fname" name="fname" required />
+						</div>
+						<div class="form-group">
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lname" required />
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="form-group">
+							<label for="message">text us</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+						<button type="submit">Send</button>
+					</form>
+			</section>
+		</main>
+		<footer class="footer-content">
+			<p>&copy; 2025 Horus Timer Shop. All Rights Reserved.</p>
+			<address>
+				<strong>Horus Timer Shop|HTS|</strong><br />
+				Λεωφόρος Κων. Καραμανλή 122, Θεσσαλονίκη, ΤΚ 54454<br />
+				Τηλέφωνο: <a href="tel:+3023101234567">2310 123 4567</a><br />
+				Email: <a href="mailto:info@horustimershop.gr">info@horustimershop.gr</a>
+			</address>
+		</footer>
+		
+		<script src="script.js"></script>
+	</body>
+</html>
