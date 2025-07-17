@@ -1,0 +1,78 @@
+body {
+	
+	font-family: Arial, sans-serif;
+}
+
+.parallax {
+	
+	background-image: url("../images/pexels-kuldip-vadadoriya-605478304-19081130.jpg");
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	color: white;
+	text-align: center;
+	
+}
+
+.parallax-overlay {
+	
+	background: rgba(0,0,0,.6);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.hero-content {
+	
+	position: relative;
+	z-index: 2;
+	}
+	
+/*==== products cards ====*/
+
+.card {
+	
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card-img-top {
+	
+	object-fit: cover;
+	height: 200px;
+	width: 100%;
+}
+
+.card-body {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.card-title, .card-text {
+	
+	margin-bottom: 15px;
+}
+
+.card .btn {
+	
+	margin-top: auto;
+	align-self: center; 
+}
+
+footer {
+	
+	background: #222;
+	color: #fff;
+}

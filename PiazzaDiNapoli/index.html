@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pizza Piazza Di Napoli</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- BOOTSTRAP CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- FONT AWESOME -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+	<!-- Responsive Navbar section --->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">Pizza Piazza Di Napoli</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+			aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainNavbar">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#menu">products</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">about</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#order">Παραγγελία</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Parallax Hero Section -->
+	<header class="parallax d-flex justify-content-center align-items-center">
+    <div class="parallax-overlay"></div>
+    <div class="hero-content text-center">
+      <h1 class="display-4">Η Αυθεντική Ιταλική Πίτσα</h1>
+      <a href="#menu" class="btn btn-danger mt-4">
+        <i class="fas fa-pizza-slice"></i> Δες το Μενού
+      </a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="container py-5">
+    <h2 class="text-center mb-4">Το menu</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="images/pexels-kuldip-vadadoriya-605478304-19081130.jpg" class="card-img-top" alt="Pizza Margherita">
+          <div class="card-body">
+            <h5 class="card-title">Margherita</h5>
+            <p class="card-text">Η κλασική Ιταλική ζύμη πίτσας με σάλτσα pomodori, μοτσαρέλα και φρέσκο βασιλικό</p>
+            <button onclick="addToCart('Μαργαρίτα', 7)" class="btn btn-success">
+              <i class="fas fa-cart-plus"></i> Προσθήκη στο καλάθι (€7)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="images/pexels-vince-2471171.jpg" class="card-img-top" alt="Pizza Pepperoni">
+          <div class="card-body">
+            <h5 class="card-title">Peperoni</h5>
+            <p class="card-text">Πικάντικο σαλάμι Peperoni, με φρέσκο χυμό τομάτας και ποικιλία από τυριά.</p>
+            <button onclick="addToCart('Πεπερόνι', 8)" class="btn btn-success">
+              <i class="fas fa-cart-plus"></i> Προσθήκη στο καλάθι (€8)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add MORE PRODUCTS HERE -->
+
+    </div>
+
+	<!-- ABOUT SECTION --->
+	</section>
+	<section id="about" class="container py-5">
+		<h2 class="text-center mb-4">Λίγα λόγια για εμάς..</h2>
+		<p class="text-center">Είμαστε παραδοσιακή ιταλική πιτσαρία με πάθος για φρέσκες, γνήσιες γεύσεις και τοπικά υλικά.</p>
+	</section>
+	
+	<!-- CONTACT SECTION --->
+	<section id="contact" class=" py-5 bg-light">
+		<div class="container">
+			<h2 class="text-center mb-4">Παραγγελία on-line</h2>
+			<form action="order.php" method="POST" class="mx-auto" style="max-width: 600px;">
+				<div class="mb-3">
+					<label for="name" class="form-label">Όνομα</label>
+					<input type="text" name="name" id="name" class="form-control" required />
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" name="email" id="email" class="form-control" required />
+				</div>
+				<div class="mb-3">
+					<label for="phone" class="form-label">Τηλέφωνο</label>
+					<input type="tel" name="phone" id="phone" class="form-control" required />
+				</div>
+				<div class="m-3">
+					<label for="order" class="form-label">Παραγγελία</label>
+					<textarea name="order" id="order" rows="5" class="form-control" placeholder="π.χ. 1x Pizza Special, 1x Coca-Cola" required></textarea>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-danger px-5">Αποστολή</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+	<!--- Περιοχή ORDER --->
+	<section id="order" class="py-5 bg-light">
+		<div class="container">
+			<h2 class="text-center mb-4">Κάνε την Παραγγελία σου</h2>
+			<form action="order.php" method="POST" class="row g-3">
+			
+			<!--- Οι ΕΠΙΛ¨ΓΕΣ της ΠΙΤΣΑΣ --->
+			<div class="col-md-6">
+				<label for="pizza" class="form-label">Επιλογή Πίτσας</label>
+				<select class="form-select" id="pizza" name="pizza" required>
+					<option value="" disabled selected>-- Επιλογή --</option>
+					<option value="Margherita">Margherita (€8.00)</option>
+					<option value="Peperoni">Peperoni (€9.00)</option>
+					<option value="Special">Special (€11.00)</option>
+					<option value="4 τυριά">4 τυριά (€7.00)</option>
+					<option value="Vegetarian">Vegetarian (€8.00)</option>
+				</select>
+			</div>
+			
+			<!--- Επιλογή του Ποτού ---->
+			<div class="col-md-6">
+				<label for="drink" class="form-label">Επιλογή Ποτού</label>
+					<select class="form-select" id="drink" name="drink">
+						<option value="" disabled selected>-- Επιλογή Ποτού --</option>
+						<option value="Coca-cola">Coca-cola (€1.50)</option>
+						<option value="Sprite">Sprite (€1.50)</option>
+						<option value="Heineken">Heineken (€2.50)</option>
+						<option value="Νερό Ιόλη 500ml">Coca-cola (€0.50)</option>
+					</select>
+			</div>
+			
+			<!-- Τρόπος Πληρωμής ---->
+			<div class="col-md-6">
+				<label for="payment" class="form-label">Τρόπος Πληρωμής</label>
+				<select class="form-select" id="payment" name="payment" required>
+					<option value="" disabled selected>-- Τρόπος Πληρωμής --</option>
+					<option value="Μετρητά">Μετρητά</option>
+					<option value="POS (Κάρτα)">POS (Κάρτα)</option>
+					<option value="Online">Online</option>
+				</select>
+			</div>
+			
+			<!-- Ονομα πελατη --->
+			<div class="col-md-6">
+				<label for="name" class="form-label">Όνομα</label>
+				<input type="text" class="form-control" id="name" name="name" required>
+			</div>
+			
+			<!-- Email ---->
+			<div class="col-md-6">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" class="form-control" id="email" name="email" required>
+			</div>
+			
+			<!-- Τηλέφωνο --->
+			<div class="col-md-6">
+				<label for="phone" class="form-label">Τηλέφωνο</label>
+				<input type="tel" class="form-control" id="phone" name="phone" required>
+			</div>
+			
+			<!--- Σχόλια και Σημειώσεις -->
+			<div class="col-12">
+				<label for="order" class="form-label">Σχόλια / Διεύθυνση Παράδοσης</label>
+				<textarea class="form-control" id="order" name="order" rows="3"></textarea>
+			</div>
+			
+			<!-- Submit -->
+			<div class="col-12 text-center">
+				<button type="submit" class="btn btn-success px-5">Αποστολή Παραγγελίας</button>
+			</div>
+			</form>
+		</div>
+	</section>
+	
+	
+  <!-- Cart Section -->
+	<section id="cart" class="container py-5">
+    <h2 class="text-center mb-4">
+		<i class="fas fa-shopping-cart"></i> Το καλάθι
+	</h2>
+	<div class="table-responsive">
+		<table class="table table-bordered text-center align-middle">
+			<thead class="table-dark">
+				<tr>
+					<th>Προϊον</th>
+					<th>Ποσότητα</th>
+					<th>Τιμή Μονάδας</th>
+					<th>Σύνολο</th>
+					<th>Ενέργεια</th>
+				</tr>
+			</thead>
+			<tbody id="cart-body">
+			
+			
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3" class="text-end"><strong>Σύνολο:</strong></td>
+					<td colspan="2" id="cart-total">€0.00</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center">
+    <p><i class="fas fa-map-marker-alt"></i> Διεύθηνση: Γρηγορίου Λαμπράκη 123, Θεσσαλονίκη, ΤΚ 54454</p>
+    <p><i class="fas fa-phone"></i> 2310 123 4567 • <i class="fas fa-envelope"></i> info@pizzanapoli.gr</p>
+    <p>
+      <a href="https://facebook.com" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+	  <a href="https://tiktok.com" class="text-white"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com" class="text-white"><i class="fab fa-youtube"></i></a>
+    </p>
+    <p>© 2025 Pizza Piazza Di Napoli</p>
+  </footer>
+		
+		
+		
+	<!-- Bootstrap Bundle JS (με Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+	</body>
+</html>
